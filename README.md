@@ -5,7 +5,7 @@
 
 N/A
 
-## 1. Before You Start
+## 1. Before starting the project
 
 ### 1.1. Background & Motivation
 
@@ -13,7 +13,7 @@ Web-based applications are becoming one of the most common ways to provide digit
 
 In this project, I'll develop an SPA that maintains user and application state without full page reloads by dynamically manipulating the DOM with JavaScript.
 
-### 1.2. Lectures to Watch
+### 1.2. Materials to Watch
 
 The following lectures will be useful:
 - Everything from Assessment 2
@@ -90,8 +90,8 @@ $ npx http-server frontend -c 1 -p [port]
 
 Clone the backend server repository, install dependencies, and start the server:
 ```bash
-$ git clone git@nw-syd-gitlab.cse.unsw.tech:COMP6080/24T1/ass3-backend.git
-$ cd ass3-backend
+$ git clone [git repository]
+$ cd [The path to file]
 $ npm install
 $ npm start
 ```
