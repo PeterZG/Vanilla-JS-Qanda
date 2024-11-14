@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LurkForWork</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- You can add your styles and scripts here -->
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/global.css" />
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css" />
+</head>
+
+<body>
+
+    <!-- This is an example app structure, you can modify this as much as you choose -->
+    <header class="container">
+        <div class="header mb-4" id="loginHeader">
+            <nav class="navbar navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="javascript:void(0)" id="home_link">lurkforwork.com</a>
+                    <!-- <a href="#" class="btn btn-info">abc</a> -->
+                    <div class="d-flex">
+                        <button id="create_link" class="btn btn-primary me-4" type="submit">Create</button>
+                        <button id="profile_link" class="btn btn-primary me-4" type="submit">Profile</button>
+                        <button id="logout" class="btn btn-secondary" type="submit">Logout</button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main role="main" class="container">
+        <!-- login page -->
+        <div id="login_div" class="page" data-display="flex">
+            <div class="login_inner_box">
+                <div class="row mb-4">
+                    <div class="col-4"><span>*</span>Email:</div>
+                    <div class="col-8">
+                        <input type="text" class="form-control" id="email" placeholder="Email" required="true"
+                            >
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-4"><span>*</span>Password:</div>
+                    <div class="col-8">
+                        <input type="password" class="form-control" id="password" placeholder="Password"
+                            >
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                    </div>
+                    <div class="col-8">
+                        <button id="login" class="btn btn-primary">Login</button>
+                        <button id="register_link" class="btn btn-secondary">Register</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- register page -->
+        <div id="register_div" class="page" data-display="flex">
+            <div class="register_inner_box">
+                <div class="row mb-4">
+                    <div class="col-4"><span>*</span>Email:</div>
+                    <div class="col-8">
+                        <input type="text" class="form-control" id="register_email" placeholder="Email">
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-4"><span>*</span>Name:</div>
+                    <div class="col-8">
+                        <input type="text" class="form-control" id="register_name" placeholder="Name">
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-4"><span>*</span>Password:</div>
+                    <div class="col-8">
+                        <input type="password" class="form-control" id="register_password" placeholder="Password">
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-4"><span>*</span>Confirm Password:</div>
+                    <div class="col-8">
+                        <input type="password" class="form-control" id="confirm_password" placeholder="Password">
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-4"></div>
+                    <div class="col-8">
+                        <button id="register" class="btn btn-primary">Register</button>
+                        <button id="login_link" class="btn btn-secondary">Login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- dashboard page -->
+        <div id="dashboard" class="page" data-display="block">
+            <div class="row">
+                <div id="thread_list" class="col-4">
+                </div>
+                <div id="thread_detail_box" class="col-8">
+                    <input type="hidden" name="" id="detail_thread_id">
+                    <input type="hidden" name="" id="detail_thread_lock">
+                    <input type="hidden" name="" id="detail_thread_comments_count">
+                    <div id="thread_detail">
+                    </div>
+                    <div id="thread_comments">
+    
+                    </div>
+                    <div id="create_comment_div">
+                        <div>
+                            <textarea name="" id="comment" cols="30" rows="3" class="form-control"></textarea>
+                        </div>
+                        <div>
+                            <button id="create_comment" class="mt-2 btn btn-primary">Comment</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- create thread page -->
+        <div id="create_div" class="page mt-5">
+
+            <div class="row mb-4">
+                <div class="col-4">Title:</div>
+                <div class="col-8">
+                    <input type="text" id="thread_title" class="form-control">
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-4">IsPublic:</div>
+                <div class="col-8">
+                    <input type="radio" name="thread_public" value="1" checked>Yes
+                    <input type="radio" name="thread_public" value="0">No
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-4">Content:</div>
+                <div class="col-8">
+                    <textarea name="" id="thread_content" cols="30" rows="10" class="form-control"></textarea>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-4"></div>
+                <div class="col-8">
+                    <button id="create_thread" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+
+        </div>
+        <!-- edit thread page -->
+        <div id="edit_thread" class="page">
+            <input type="hidden" id="edit_id">
+
+            <div class="row mb-4">
+                <div class="col-4">Title:</div>
+                <div class="col-8">
+                    <input type="text" id="edit_title" class="form-control">
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-4">IsPublic:</div>
+                <div class="col-8">
+                    <input type="radio" name="edit_public" id="edit_public1" value="1" checked>Yes
+                    <input type="radio" name="edit_public" id="edit_public0" value="0">No
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-4">IsLocked:</div>
+                <div class="col-8">
+                    <input type="radio" name="edit_locked" id="edit_locked1" value="1" checked>Yes
+                    <input type="radio" name="edit_locked" id="edit_locked0" value="0">No
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-4">Content:</div>
+                <div class="col-8">
+                    <textarea name="" id="edit_content" cols="30" rows="10" class="form-control"></textarea>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-4"></div>
+                <div class="col-8">
+                    <button id="save_thread" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+        <!-- user profile page -->
+        <div id="user_profile" class="page">
+            <div class="row mt-4">
+                <div class="col-4">
+                    Name:
+                </div>
+                <div class="col-8">
+                    <input type="hidden" name="" id="user_id">
+                    <input type="text" class="form-control" id="user_name">
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-4">
+                    Email:
+                </div>
+                <div class="col-8">
+                    <input type="text" class="form-control" id="user_email">
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-4">
+                    Image:
+                </div>
+                <div class="col-8">
+                    <img id="user_image" src="images/default.png" alt="user image" />
+                    <input type="file" name="" id="user_image_file">
+                </div>
+            </div>
+
+            <div id="user_profile_edit" class="hide">
+
+                <div class="row mt-4">
+                    <div class="col-4">
+                        Password:
+                    </div>
+                    <div class="col-8">
+                        <input type="password" id="user_password" class="form-control">
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-4">
+                    </div>
+                    <div class="col-8">
+                        <button id="save_user" class="btn btn-primary">Save</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-4" id="user_is_admin_div">
+                <div class="col-4">
+                    UserType:
+                </div>
+                <div class="col-3">
+                    <select name="" id="user_type" class="form-control dropdown">
+                        <option value="0">User</option>
+                        <option value="1">Admin</option>
+                    </select>
+                </div>
+                <div class="col-5">
+                    <button id="update_user_type_btn" class="btn btn-primary">Update</button>
+                </div>
+            </div>
+            <h2 class="mt-4 mb-3">User Threads:</h2>
+            <div id="user_threads">
+
+            </div>
+        </div>
+    </main>
+    <!-- <footer class="container">
+        <p>&copy; lurkforwork.com 2022</p>
+    </footer> -->
+    <!-- Message Modal -->
+    <div class="modal fade" id="errorModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Error:</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-danger" id="error_body"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="messageModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Message:</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-success" id="message_body"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Reply comment modal-->
+    <div class="modal fade" id="commentModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Comment:</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" name="" id="reply_comment_id">
+                    <textarea name="" id="reply_comment_content" cols="50" rows="3"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="reply_comment_btn" class="btn btn-primary"
+                        data-bs-dismiss="modal">Comment</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- edit comment modal -->
+    <div class="modal fade" id="editCommentModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Comment:</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" name="" id="edit_comment_id">
+                    <textarea name="" id="edit_comment_content" cols="50" rows="3"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="edit_comment_btn" class="btn btn-primary"
+                        data-bs-dismiss="modal">Comment</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- notification page -->
+    <div class="position-fixed bottom-0 end-0 p-3" >
+        <div id="liveToast" class="toast" data-bs-delay="2000" >
+            <div class="toast-header">
+                <strong class="me-auto">New Comment</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" ></button>
+            </div>
+            <div class="toast-body">
+                New comment created for you watched thread
+                <a href="javascript:void(0)" id="notify_thread"></a>.
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="styles/bootstrap.bundle.min.js"></script>
+    <script type="module" src="src/main.js"></script>
+</body>
+
+</html>

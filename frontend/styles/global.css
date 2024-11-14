@@ -1,0 +1,109 @@
+/* base styles, feel free to edit */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial;
+}
+
+.hide {display: none;}
+.header {display: none;}
+.page {
+    display: none;
+}
+/** Login page */
+#login_div, #register_div {
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-around;
+    margin-top: 100px;
+}
+.login_inner_box, .register_inner_box {
+    width: 600px;
+    border: solid 1px rgb(187, 184, 184);
+    border-radius: 10px;
+    padding: 30px;
+}
+.login_inner_box .btn, .register_inner_box .btn {
+    width: 100px;
+}
+#login_div span,#register_div span {
+    color: red;
+}
+
+/** dashboard page */
+#thread_list {
+    max-width: 400px;
+}
+.thread_item {
+    max-width: 400px;
+    padding: 5px 10px;
+    border-bottom: solid 1px rgb(217, 227, 243);;
+}
+.thread_item:hover{
+    background-color: rgb(217, 227, 243);
+    border-radius: 5px;
+}
+.thread_item.select {
+    background-color: rgb(170, 201, 248);
+    border-radius: 5px;
+}
+.title {
+    font-weight: bolder;
+}
+
+/** thread detail */
+#thread_detail_box {
+    /* width: 100%; */
+    font-size: 1.3em;
+}
+#thread_detail {
+    width: 100%
+}
+#thread_detail .title {
+    font-size: 1.5em;
+    border-bottom: solid 1px rgb(217, 227, 243);
+}
+
+#thread_detail .content {
+    font-size: 1em;
+    border-bottom: solid 1px rgb(217, 227, 243);
+}
+
+/** comment */
+.comment {
+    border-bottom: solid 1px rgb(66, 176, 245);
+    padding: 10px 0px;
+    border-left: solid 1px rgb(66, 176, 245);
+}
+.avatar {
+    cursor: pointer;
+    color: blue;
+}
+.avatar img{
+    border: solid 1px rgb(217, 208, 208);
+    border-radius: 5px;
+    width: 100%;
+}
+.sub_comment {
+    border-left: solid 15px rgb(66, 176, 245);
+}
+
+#commentModal > textarea {
+    width: 100%;
+}
+
+/** user profile */
+#user_image {
+    border: solid 1px rgb(217, 208, 208);
+    border-radius: 5px;
+    max-width: 100px;
+    max-height: 100px;
+}
+/** user thread */
+.user_thread {
+    border-bottom: solid 1px rgb(66, 176, 245);
+}
+.comment_info, .sub_info {
+    color: saddlebrown;
+}
