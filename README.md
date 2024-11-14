@@ -1,5 +1,5 @@
 
-# Qanda Project Plan
+# Vanilla JS: Qanda Project
 
 ## 0. Change Log
 
@@ -9,102 +9,116 @@ N/A
 
 ### 1.1. Background & Motivation
 
-As web-based applications become the mainstream form of digital products, understanding the underlying JavaScript technologies and architectures is essential. Even though modern tools (such as ReactJS) make it easier to build these applications, mastering fundamental JavaScript skills is beneficial for deeper understanding and skill enhancement. This project aims to build a frontend application with Vanilla JS and interact with a RESTful API using JavaScript. This helps build applications without high-level frameworks.
+Web-based applications are becoming one of the most common ways to provide digital services to a large audience. While modern frameworks and libraries can simplify development, understanding the fundamentals of JavaScript and Single Page Applications (SPA) remains essential for well-rounded web development skills. This project, "Qanda," aims to build a frontend in Vanilla JavaScript that interacts with a RESTful API backend provided as a NodeJS express server.
 
-We will develop a single-page application (SPA) named Qanda, which mimics UNSW's EdStem forum, creating a web application with dynamic interactions. SPA is characterized by using AJAX/fetch to dynamically manipulate the DOM without reloading the page, allowing consistent user and application state. The entire application only uses one `index.html` page, and all "page transitions" will be implemented through JavaScript DOM manipulation.
+In this project, I'll develop an SPA that maintains user and application state without full page reloads by dynamically manipulating the DOM with JavaScript.
 
-### 1.2. Recommended Course Videos
+### 1.2. Lectures to Watch
 
-To complete the project successfully, it is recommended to watch the following course videos:
-
-- Assessment 2-related videos
+The following lectures will be useful:
+- Everything from Assessment 2
 - [CSS Frameworks](https://cgi.cse.unsw.edu.au/~cs6080/24T1/content/lectures/css-frameworks)
-- [Local Storage](https://cgi.cse.unsw.edu.au/~cs6080/24T1/content/lectures/javascript-browser-localstorage)
+
+Additional lectures to help complete the project:
+- [Local storage](https://cgi.cse.unsw.edu.au/~cs6080/24T1/content/lectures/javascript-browser-localstorage)
 - [Events & Callbacks](https://cgi.cse.unsw.edu.au/~cs6080/24T1/content/lectures/javascript-async-callbacks)
 - [Promises](https://cgi.cse.unsw.edu.au/~cs6080/24T1/content/lectures/javascript-async-promises)
 - [AJAX Introduction](https://cgi.cse.unsw.edu.au/~cs6080/24T1/content/lectures/ajax-intro)
 - [Fetch](https://cgi.cse.unsw.edu.au/~cs6080/24T1/content/lectures/ajax-fetch)
-- [UI Fundamentals](https://cgi.cse.unsw.edu.au/~cs6080/24T1/content/lectures/ui-fundamentals)
-- [Accessibility Topics](https://cgi.cse.unsw.edu.au/~cs6080/24T1/content/lectures/accessibility)
+- Accessibility topics including [Perceivability](https://cgi.cse.unsw.edu.au/~cs6080/24T1/content/lectures/accessibility-perceivability), [Operability](https://cgi.cse.unsw.edu.au/~cs6080/24T1/content/lectures/accessibility-operability), [Understandability](https://cgi.cse.unsw.edu.au/~cs6080/24T1/content/lectures/accessibility-understandability), and [Robustness](https://cgi.cse.unsw.edu.au/~cs6080/24T1/content/lectures/accessibility-robustness)
 
-## 2. Project Tasks (Frontend)
+## 2. Task Details
 
-### 2.1. Milestone 1 - User Registration & Login
-... (task details as provided earlier)
+This project is a simplified frontend replica of the forum "EdStem" used in UNSW courses. The backend is provided as a NodeJS express server, and the task is to build the frontend in Vanilla JavaScript without frameworks.
 
-### 2.2. Milestone 2 - Creating Threads
-... (task details)
+The project is organized into milestones, each focusing on a specific aspect of functionality.
+
+### 2.1. Milestone 1 - Registration & Login
+
+- Implement login and registration interfaces that interact with backend authentication endpoints.
+- Display errors for invalid login or registration attempts.
+
+### 2.2. Milestone 2 - Thread Creation and Listing
+
+- Allow users to create new threads, with fields for title, content, and privacy settings.
+- List all threads on the dashboard, displaying basic thread info.
 
 ### 2.3. Milestone 3 - Thread Interactions
-... (task details)
 
-### 2.4. Milestone 4 - Commenting System
-... (task details)
+- Enable editing, deleting, liking, and watching threads with user-friendly interactions.
 
-### 2.5. Milestone 5 - User Management
-... (task details)
+### 2.4. Milestone 4 - Comments
 
-### 2.6. Milestone 6 - Challenge Tasks
-... (task details)
+- Implement threaded comments with nesting, sorting, and liking functionality.
 
-### 2.7. Milestone 7 - Advanced Challenge Tasks
-... (task details)
+### 2.5. Milestone 5 - User Profile Management
+
+- Allow viewing and editing of user profiles. Admins can adjust user roles.
+
+### 2.6. Milestone 6 - Challenge Components (Advanced)
+
+#### 2.6.1. Infinite Scroll
+Implement infinite scrolling for loading threads progressively.
+
+#### 2.6.2. Live Update
+Threads and comments update live without reloading the page, implemented using polling.
+
+#### 2.6.3. Push Notifications
+Push notifications for new watched threads, implemented via polling or browser notifications.
+
+### 2.7. Milestone 7 - Very Challenge Components (Advanced *= 2)
+
+#### 2.7.1. Static Feed Offline Access
+Enable offline access to the latest feed by caching in local storage.
+
+#### 2.7.2 Fragment-based URL Routing
+Use URL fragments for different page views, enabling profile and feed navigation via URLs.
 
 ## 3. Getting Started
 
 ### 3.1. The Frontend
 
-Stub code has been provided to help you get started in:
- * `frontend/index.html`
- * `frontend/styles/global.css`
- * `frontend/src/helpers.js`
- * `frontend/src/main.js`
+Stub code is available to help start development, including `index.html` and global CSS. Run a local server to work on the frontend.
 
-To run the frontend locally, install a server:
-```
+#### Starting the Local Server
+```bash
 $ npm install --global http-server
 $ npx http-server frontend -c 1 -p [port]
 ```
 
 ### 3.2. The Backend
 
-Clone and run:
-```
-$ git clone git@repo.git
+Clone the backend server repository, install dependencies, and start the server:
+```bash
+$ git clone git@nw-syd-gitlab.cse.unsw.tech:COMP6080/24T1/ass3-backend.git
+$ cd ass3-backend
 $ npm install
 $ npm start
 ```
 
-Use `npm run reset` to reset data.
-
-### 3.3. Taking the First Steps
-- Read the entire spec
-- Load `index.html` to test
-- Load backend and make a sample API call
-- Begin building each component iteratively
-
-### 3.4. Making Fetch Requests
-Example POST and GET requests:
-```javascript
-fetch('http://localhost:5005/path', { ... })
-```
-
 ## 4. Constraints & Assumptions
 
-### 4.1. Javascript
-Implement this assignment in ES6-compliant Vanilla JavaScript without libraries like ReactJS.
+### 4.1. JavaScript
+
+- Use Vanilla JS (ES6-compliant). Frameworks like ReactJS or Angular are prohibited.
 
 ### 4.2. CSS and Libraries
-You may use external CSS libraries but avoid frameworks that modify JavaScript behavior.
+
+- External CSS libraries like Bootstrap are allowed with attribution.
 
 ### 4.3. Browser Compatibility
-Test on Google Chrome and Chromium on CSE machines.
+
+- Test on Google Chrome or Chromium.
 
 ### 4.4. Other Requirements
-Build as a single-page app; avoid multi-page approaches.
 
-### 4.5. Static HTML & DOM Manipulation
-Allowed to add static HTML/CSS to `index.html` and manipulate it via JavaScript.
+- This project is a single-page app, achieved through JavaScript DOM manipulation.
+
+### 4.5. Static HTML, DOM Manipulation
+
+- Use `insertAdjacentHTML` and `innerText` for DOM updates.
 
 ### 4.6. Prohibited Usages
-Avoid async/await syntax; use Promises. Avoid string-to-DOM parsers like `innerHTML`.
+
+- Only one HTML file (`index.html`) allowed.
+- `async` and `await` syntax is not permitted; use Promises instead.
