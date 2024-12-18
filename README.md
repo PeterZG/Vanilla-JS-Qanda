@@ -2,7 +2,7 @@
 # Vanilla JS: Qanda Project
 
 
-## 1. Before I Start
+## 1. Before Starting
 
 ### 1.1. Background
 
