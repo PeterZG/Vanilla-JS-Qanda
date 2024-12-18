@@ -227,7 +227,7 @@ Milestone 5 focuses predominantly on user profiles and admins managing other adm
 #### 2.6.3. Push Notifications
 * Users can receive push notifications when a user they watch posts a thread. To know whether someone or not has posted a thread, you must "poll" the server (i.e. intermittent requests, maybe every second, that check the state). You can implement this either via browser's built in notification APIs or through your own custom built notifications/popups. The notifications are not required to exist outside of the webpage.
 
-*This part I can research online to implement, and there are plenty of resources available.*
+*This part can research online to implement, and there are plenty of resources available.*
 
 ### 2.7. Milestone 7 - Very Challenge Components (`advanced *= 2`)
 
@@ -236,7 +236,7 @@ Milestone 5 focuses predominantly on user profiles and admins managing other adm
 * Cache information from the latest feed in local storage in case of outages.
 * When the user tries to interact with the website at all in offline mode (e.g. comment, like) they should receive errors.
 
-*This part I can research online to implement, and there are plenty of resources available.*
+*This part can research online to implement, and there are plenty of resources available.*
 
 #### 2.7.2 Fragment based URL routing
 Users can access different pages using URL fragments:
@@ -246,7 +246,7 @@ Users can access different pages using URL fragments:
 /#profile=4
 ```
 
-*This part I can research online to implement, and there are plenty of resources available.*
+*This part can research online to implement, and there are plenty of resources available.*
 
 
 ## 3. Getting Started
