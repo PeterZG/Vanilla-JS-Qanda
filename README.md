@@ -1,6 +1,7 @@
 
 # Vanilla JS: Qanda Project
 
+
 ## 1. Before I Start
 
 ### 1.1. Background
@@ -12,7 +13,6 @@ For this project, I need to build a **frontend** website using Vanilla JS (no Re
 A theoretical background on how to interface with this API can be found in the "promises & fetch" lecture from my undergraduate web development course.
 
 The web-based application I will build must be a single page app (SPA). SPAs give websites an "app-like feeling," and are characterised by their use of a single full load of the initial HTML page, and then using AJAX/fetch to dynamically manipulate the DOM without requiring a full page reload. In this way, SPAs are generated, rendered, and updated using JavaScript. Since SPAs don’t require a user to navigate away from a page to perform actions, they retain a degree of user and application state. In essence, this means the website will only ever have an `index.html` file, and the concept of "moving between pages" will be achieved by modifying the DOM dynamically. If the site is not implemented as a single-page app, it will not align with the project's goals.
-
 
 ### 1.2. materials to watch
 
@@ -43,7 +43,6 @@ The UNSW version of the forum is called "Qanda". It is backed by a server built 
 I have written out a set of clear and concise functional requirements and behavior expectations.
 
 These requirements describe a series of **screens**. Screens can be popups/modals, or entire pages. The use of the term "screen" is meant to give me flexibility in how I display them. A screen essentially represents a certain state of my web-based application.
-
 
 ## 2.1. Milestone 1 - Registration & Login
 
@@ -78,7 +77,6 @@ Milestone 1 focuses on building the basic user interface for registering and log
 * Initially, the dashboard will be a blank screen containing only a “logout” button that is always visible.
 * When the logout button is pressed, the token will be removed from the site’s state (e.g., local storage) and the user will be redirected back to the login screen.
 
-
 ### 2.2. Milestone 2 - Making Threads
 
 Milestone 2 focuses on how to create a thread and then view that thread (along with others).
@@ -112,7 +110,6 @@ Milestone 2 focuses on how to create a thread and then view that thread (along w
   * Number of likes
 * This page will later include features such as edit, delete, like, watch, comments, etc., but these can be skipped for `2.2.3`.
 
-
 ### 2.3. Milestone 3 - Thread Interactions
 
 Milestone 3 focuses on how to interact with threads once they've been made.
@@ -142,7 +139,6 @@ Milestone 3 focuses on how to interact with threads once they've been made.
 * On an individual thread screen, the user should see a "watch" action (button, icon) somewhere above the fold that allows them to watch or unwatch a thread via `PUT /thread/watch`.
 * If the thread is currently watched by this user, the button should visually indicate that clicking it will unwatch the thread. If the thread is not watched by this user, the button should visually indicate that clicking it will start watching the thread.
 * Any liking or unliking action should immediately reflect a change in the UI.
-
 
 ### 2.4. Milestone 4 - Comments
 
@@ -213,7 +209,6 @@ Milestone 5 focuses predominantly on user profiles and admins managing other adm
 * The option selected in the dropdown by default on the page should reflect the user's current admin status.
 * Below the dropdown, there should be an "Update" button that, when clicked, updates the user to that permission level.
 
-
 ### 2.6. Milestone 6 - Challenge Components (`advanced`)
 
 #### 2.6.1. Infinite Scroll 
@@ -277,9 +272,9 @@ Once started, access the `index.html` by visiting `http://localhost:8000` (or th
 
 ### 3.2. The Backend
 
-The backend code cannot be modified. All the work should focus on the frontend. The backend is provided to supply the frontend with API endpoints.
+The backend is provided to supply the frontend with API endpoints.
 
-To clone the backend server code, run: `git clone https://github.com/PeterZG/Vanilla-JS-Qanda.git`, then enter the directory and run `npm install`.
+Before starting the backend server, run `npm install` to install the necessary dependencies.
 
 To start the backend server:
 
@@ -333,7 +328,6 @@ const apiCall = (path, body) => {
     });
 };
 
-
 Here is some helpful starter code to make a GET request (for authenticated routes). Note: there are many other ways (and some cleaner than this) to do this, so don't assume this is perfect code. It will just help you get started.
 
 ```Javascript
@@ -355,6 +349,7 @@ const apiCall = (path, token, queryString) => {
       });
 };
 ```
+
 
 ## 4. Project Considerations
 
