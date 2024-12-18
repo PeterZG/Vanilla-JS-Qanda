@@ -1,6 +1,7 @@
 
 # Vanilla JS: Qanda 项目
 
+
 ## 1. 开始之前
 
 ### 1.1. 背景
@@ -250,6 +251,7 @@ UNSW 版的论坛叫做 "Qanda"。它由一个基于 NodeJS（express）构建�
 
 > 这部分我可以自行在线研究实现方法，网上有很多资源可以参考。
 
+
 ## 3. 开始使用
 
 ### 3.1. 前端
@@ -278,27 +280,29 @@ UNSW 版的论坛叫做 "Qanda"。它由一个基于 NodeJS（express）构建�
 
 ### 3.2. 后端
 
-后端提供了 API 接口来为前端提供数据支持。
+后端提供了API接口供前端使用。
+
+在启动后端服务器之前，请先运行 `npm install` 来安装必要的依赖。
 
 启动后端服务器：
 
 `$ npm start`
 
-可以通过浏览器访问 `http://localhost:5005` 来查看后端 API 文档，该文档列出了所有可用的 HTTP 路由。
+通过访问 `http://localhost:5005` 来查看后端API文档。这个URL会列出所有可用的HTTP路由。
 
-后端提供了一个基础的数据库，包含两个用户和一个公共频道的消息内容。你可以在 `backend/database.json` 文件中查看数据内容。
+提供了一个基本的数据库，包含两个用户和一个带有消息的公共频道。你可以在 `backend/database.json` 文件中查看内容。
 
-后端数据是持久化的，即使停止 Express 服务器，数据也会保持。如果你需要将数据库重置为原始状态，可以运行：
+后端数据是持久化的，即使Express服务器停止，它的数据也会保留。如果需要将数据库重置为原始状态，可以运行：
 
 `$ npm run reset`
 
-要备份数据库，只需复制 `database.json` 文件。如果你想清空数据库，可以运行：
+要备份数据库，只需复制 `database.json` 文件。如果想清空数据库，可以运行：
 
 `$ npm run clear`
 
 后端端口在 `frontend/src/config.js` 文件中定义，这有助于前端与后端进行通信。
 
-如果手动更新了 `database.json` 文件，记得重启后端服务器。
+如果手动更新了 `database.json` 文件，请重启后端服务器。
 
 ### 3.3. 关于项目开始的第一步
 
@@ -332,7 +336,6 @@ const apiCall = (path, body) => {
     });
 };
 
-
 以下是发起 GET 请求的代码示例（用于认证的路由）。请注意，也有很多其他方法（有些可能比这个更简洁），这只是一个入门的示例。
 
 ```Javascript
@@ -354,6 +357,7 @@ const apiCall = (path, token, queryString) => {
       });
 };
 ```
+
 
 ## 4. 项目注意事项
 
@@ -388,6 +392,7 @@ const apiCall = (path, token, queryString) => {
  * 项目中不得包含超过 1 个 HTML 文件。
  * 不得使用 `async` 和 `await` 语法。你必须使用 JavaScript 的 Promise。
  * 不得使用任何字符串到 DOM 的解析方法（例如 `DOMParser`、`innerHTML` 属性或类似方法）。
+
 
 ### 5. 鸣谢
 
