@@ -361,15 +361,15 @@ const apiCall = (path, token, queryString) => {
 ### 4.1. Javascript
 
  * This project must be implemented using ES6-compliant Vanilla JavaScript. You cannot use ReactJS, JQuery, or other abstract frameworks. For example, you cannot use popular JavaScript frameworks like [Angular](https://angular.io/) or [React](https://reactjs.org/).
- * You may **NOT** directly use external JavaScript. Do not use NPM to install development libraries unless approved for the project.
+ * **NOT** directly use external JavaScript. Do not use NPM to install development libraries unless approved for the project.
 
 ### 4.2. CSS and Other Libraries
 
- * External CSS libraries may be included in this project (using the `<link />` tag). You must attribute these sources (i.e. provide URL/author in source code comments). For example, you are permitted to use the popular [Bootstrap](https://getbootstrap.com/) CSS framework. Some Bootstrap functionality relies on accompanying JavaScript. You may include this JavaScript. The JavaScript accompanying Bootstrap requires the popular general-purpose JavaScript library [jQuery](https://jquery.com/). You may include jQuery to allow Bootstrap to use it. However, you are not permitted to use **jQuery** in the code you write for the project.
+ * External CSS libraries may be included in this project (using the `<link />` tag). Attribute these sources (i.e. provide URL/author in source code comments). For example, you are permitted to use the popular [Bootstrap](https://getbootstrap.com/) CSS framework. Some Bootstrap functionality relies on accompanying JavaScript. You may include this JavaScript. The JavaScript accompanying Bootstrap requires the popular general-purpose JavaScript library [jQuery](https://jquery.com/). You may include jQuery to allow Bootstrap to use it. However, you are not permitted to use **jQuery** in the code you write for the project.
 
 ### 4.3. Browser Compatibility
 
-Ensure that your project has been tested on one of the following browsers:
+Ensure that the project has been tested on one of the following browsers:
  * Locally: Google Chrome (various operating systems)
 
 ### 4.4. Other Requirements
@@ -386,7 +386,7 @@ In this project, you are required to:
 
 ### 4.6. Prohibited Practices
 
- * You are not allowed to have more than 1 HTML file in your project repository.
+ * Not allowed to have more than 1 HTML file in your project repository.
  * Do not use the `async` and `await` syntax. You must use JavaScript Promises.
  * Do not use any string-to-DOM parsers (e.g., DOMParser, `innerHTML` property, or similar).
 
