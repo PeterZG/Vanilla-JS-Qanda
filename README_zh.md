@@ -277,11 +277,7 @@ UNSW 版的论坛叫做 "Qanda"。它由一个基于 NodeJS（express）构建�
 
 ### 3.2. 后端
 
-后端代码不可修改。所有工作应集中在前端开发上。后端提供了 API 接口来为前端提供数据支持。
-
-要克隆后端服务器代码，运行：
-
-`git clone https://github.com/PeterZG/Vanilla-JS-Qanda.git`，然后进入该目录并运行 `npm install`。
+后端提供了 API 接口来为前端提供数据支持。
 
 启动后端服务器：
 
