@@ -16,10 +16,10 @@ The web-based application I will build must be a single page app (SPA). SPAs giv
 
 ### 1.2. materials to watch
 
-Watch at least the following lectures before starting (they will help me get started):
+I watched the following lectures before starting (They helped me get started):
  * [CSS Frameworks](https://cgi.cse.unsw.edu.au/~cs6080/24T1/content/lectures/css-frameworks)
 
-Watch at least the following lectures to finish the project completely:
+I watched the following lectures to finish the project completely:
  * [Local storage](https://cgi.cse.unsw.edu.au/~cs6080/24T1/content/lectures/javascript-browser-localstorage)
  * [Events & Callbacks](https://cgi.cse.unsw.edu.au/~cs6080/24T1/content/lectures/javascript-async-callbacks)
  * [Promises](https://cgi.cse.unsw.edu.au/~cs6080/24T1/content/lectures/javascript-async-promises)
@@ -279,7 +279,7 @@ Once started, you can access your `index.html` by visiting `http://localhost:800
 
 The backend code cannot be modified. All the work should focus on the frontend. The backend is provided to supply the frontend with API endpoints.
 
-To clone the backend server code, run: `git clone xxx`, then enter the directory and run `npm install`.
+To clone the backend server code, run: `git clone https://github.com/PeterZG/Vanilla-JS-Qanda.git`, then enter the directory and run `npm install`.
 
 To start the backend server:
 
@@ -391,6 +391,6 @@ In this project, you are required to:
  * Do not use any string-to-DOM parsers (e.g., DOMParser, `innerHTML` property, or similar).
 
 
-## Acknowledgement
+### 5. Acknowledgement
 
 I would like to express my sincere gratitude to the web development course I took during my undergraduate studies at UNSW. The materials and knowledge provided during this course have been instrumental in helping me develop this project. The foundational skills and best practices I gained through the course have guided me throughout the development process, and I am deeply thankful for the support provided by the course content, lectures, and resources.
