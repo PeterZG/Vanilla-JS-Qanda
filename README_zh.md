@@ -1,5 +1,5 @@
 
-# Vanilla JS: Qanda 项目
+# Vanilla JS: Qanda 问答平台项目
 
 
 ## 1. 开始之前
