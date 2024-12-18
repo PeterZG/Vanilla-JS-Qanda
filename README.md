@@ -253,15 +253,15 @@ Users can access different pages using URL fragments:
 
 ### 3.1. The Frontend
 
-The initial module code has already been provided to help you get started quickly:
+The initial module code has already been provided to assist in getting started quickly:
  * `frontend/index.html`
  * `frontend/styles/global.css`
  * `frontend/src/helpers.js`
  * `frontend/src/main.js`
 
-You can modify or delete these template files as needed; they are provided mainly for reference and help.
+These template files can be modified or deleted as needed; they are provided mainly for reference and help.
 
-To work locally with a web server and serve the frontend static files, you may need to run another web server.
+To work locally with a web server and serve the frontend static files, may need to run another web server.
 
 To install the `http-server` globally, run:
 
@@ -273,7 +273,7 @@ Then, to start the server, run the following command in your project root:
 
 Where `[port]` is the port you want to use (e.g., `8080`). Any port number is fine.
 
-Once started, you can access your `index.html` by visiting `http://localhost:8000` (or the provided URL/port), which will avoid CORS issues.
+Once started, access the `index.html` by visiting `http://localhost:8000` (or the provided URL/port) to avoid CORS issues.
 
 ### 3.2. The Backend
 
@@ -285,7 +285,7 @@ To start the backend server:
 
 `$ npm start`
 
-You can access the backend API documentation by visiting `http://localhost:5005` in a browser. This URL will list all available HTTP routes.
+Access the backend API documentation by visiting `http://localhost:5005` in a browser. This URL will list all available HTTP routes.
 
 A basic database is provided, containing two users and one public channel with messages. You can view the contents in `backend/database.json`.
 
@@ -299,7 +299,7 @@ To back up the database, simply copy the `database.json` file. If you want to cl
 
 The backend port is defined in the `frontend/src/config.js` file. This helps the frontend communicate with the backend.
 
-If you manually update the `database.json` file, restart the backend server.
+If the `database.json` file is manually updated, restart the backend server.
 
 ### 3.3. Taking the First Steps
 
@@ -365,7 +365,7 @@ const apiCall = (path, token, queryString) => {
 
 ### 4.2. CSS and Other Libraries
 
- * You may include external CSS libraries in this project (using the `<link />` tag). You must attribute these sources (i.e. provide URL/author in source code comments). For example, you are permitted to use the popular [Bootstrap](https://getbootstrap.com/) CSS framework. Some Bootstrap functionality relies on accompanying JavaScript. You may include this JavaScript. The JavaScript accompanying Bootstrap requires the popular general-purpose JavaScript library [jQuery](https://jquery.com/). You may include jQuery to allow Bootstrap to use it. However, you are not permitted to use **jQuery** in the code you write for the project.
+ * External CSS libraries may be included in this project (using the `<link />` tag). You must attribute these sources (i.e. provide URL/author in source code comments). For example, you are permitted to use the popular [Bootstrap](https://getbootstrap.com/) CSS framework. Some Bootstrap functionality relies on accompanying JavaScript. You may include this JavaScript. The JavaScript accompanying Bootstrap requires the popular general-purpose JavaScript library [jQuery](https://jquery.com/). You may include jQuery to allow Bootstrap to use it. However, you are not permitted to use **jQuery** in the code you write for the project.
 
 ### 4.3. Browser Compatibility
 
